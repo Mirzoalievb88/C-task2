@@ -154,18 +154,33 @@
 //task4
 
 
-static int Pow(int x, int y)
+// static int Pow(int x, int y)
+// {
+//     int result = 1;
+//     for (int i = 1; i <= y; i++)
+//     {
+//         result *= x;
+//     }
+//     return result;
+// }
+
+// int x = 2;
+// int y = 3;
+
+// Console.WriteLine(Pow(x, y));
+
+
+static void Swap(ref int a, ref int b)
 {
-    int result = 1;
-    for (int i = 1; i <= y; i++)
-    {
-        result *= x;
-    }
-    return result;
+    int temp = a;
+    a = b;        
+    b = temp;      
 }
 
-int x = 2;
-int y = 3;
+int x = 5;
+int y = 10;
 
-Console.WriteLine(Pow(x, y));
+Swap(ref x, ref y);
 
+Console.WriteLine("x = " + x);
+Console.WriteLine("y = " + y);

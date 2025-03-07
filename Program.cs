@@ -113,40 +113,59 @@
 //task3
 
 
-static int MinDigit(int n)
+// static int MinDigit(int n)
+// {
+//     int min = 9; 
+//     while (n != 0)
+//     {
+//         int digit = n % 10;
+//         if (digit < min)
+//         {
+//             min = digit;
+//         }
+//         n /= 10;
+//     }
+//     return min;
+// }
+
+// static int MaxDigit(int n)
+// {
+//     int max = 0;
+//     while (n != 0)
+//     {
+//         int digit = n % 10;
+//         if (digit > max)
+//         {
+//             max = digit;
+//         }
+//         n /= 10;
+//     }
+//     return max;
+// }
+
+
+// int n = 1234;
+
+// int min = MinDigit(n);
+// int max = MaxDigit(n);
+
+// Console.WriteLine(min + " + " + max + " = " + (min + max));
+
+//task4
+
+
+static int Pow(int x, int y)
 {
-    int min = 9; 
-    while (n != 0)
+    int result = 1;
+    for (int i = 1; i <= y; i++)
     {
-        int digit = n % 10;
-        if (digit < min)
-        {
-            min = digit;
-        }
-        n /= 10;
+        result *= x;
     }
-    return min;
+    return result;
 }
 
-static int MaxDigit(int n)
-{
-    int max = 0;
-    while (n != 0)
-    {
-        int digit = n % 10;
-        if (digit > max)
-        {
-            max = digit;
-        }
-        n /= 10;
-    }
-    return max;
-}
+int x = 2;
+int y = 3;
 
+Console.WriteLine(Pow(x, y));
 
-int n = 1234;
-
-int min = MinDigit(n);
-int max = MaxDigit(n);
-
-Console.WriteLine(min + " + " + max + " = " + (min + max));

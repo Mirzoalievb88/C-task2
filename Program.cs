@@ -169,18 +169,38 @@
 
 // Console.WriteLine(Pow(x, y));
 
+//task5
 
-static void Swap(ref int a, ref int b)
+// static void Swap(ref int a, ref int b)
+// {
+//     int temp = a;
+//     a = b;        
+//     b = temp;      
+// }
+
+// int x = 5;
+// int y = 10;
+
+// Swap(ref x, ref y);
+
+// Console.WriteLine("x = " + x);
+// Console.WriteLine("y = " + y);
+
+//task6
+
+
+    
+static void Divisors(int x)
 {
-    int temp = a;
-    a = b;        
-    b = temp;      
+    for (int i = 1; i <= x; i++)
+    {
+        if (x % i == 0)
+        {
+            Console.Write(i + " ");
+        }
+    }
+    Console.WriteLine();
 }
+int x = 8;
 
-int x = 5;
-int y = 10;
-
-Swap(ref x, ref y);
-
-Console.WriteLine("x = " + x);
-Console.WriteLine("y = " + y);
+Divisors(x);
